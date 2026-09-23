@@ -1,2 +1,2 @@
 # Snitap
-
+Site responsivo. Minha primeira experiência com animações no CSS...
