@@ -129,6 +129,61 @@ section.hero{
     }
 }
 
+@media (max-width: 1023px){
+    section.hero{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+
+        & > div:first-child{
+            width: 100%;
+        }
+
+        & > div:nth-child(2){
+            align-self: center;
+            max-width: 30.5rem;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    section.hero{
+        padding: 1rem 1.5rem 3rem;
+        gap: 2rem;
+
+        & > div:nth-child(2){
+            order: -1;
+            max-width: 19.5rem;
+            height: auto;
+            aspect-ratio: 1;
+        }
+
+        & h1{
+            max-width: none;
+            font-size: var(--text-xl);
+            line-height: 1.25;
+        }
+
+        & h1 div,
+        & h1 span{
+            height: 2.5rem;
+        }
+
+        & .buttons{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-top: 3rem;
+
+            & .play{ order: -1; }
+
+            & .button.buy{
+                padding: 1.5rem 3rem;
+            }
+        }
+    }
+}
+
 @keyframes slideIn{
     50%{
         transform: translateX(-20px);

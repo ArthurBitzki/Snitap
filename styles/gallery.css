@@ -98,6 +98,91 @@ section.gallery{
     }
 }
 
+@media (max-width: 1023px){
+    section.gallery .content{
+        grid-template-areas: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        & figure:nth-child(n){
+            grid-area: auto;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    section.gallery{
+        padding: 1.5rem;
+
+        & .content{
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        & figure:nth-child(n){
+            grid-area: auto;
+        }
+
+        & figure{
+            border-radius: 2.5rem;
+
+            & > img{
+                height: 16rem;
+            }
+        }
+
+        & figcaption{
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+
+.footer{
+    display: none;
+}
+
+@media (max-width: 767px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        width: 100%;
+        padding: 3rem 1.5rem 1.5rem;
+    }
+
+    .footer-logo{
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        font: 700 1.25rem/1.3 "Syne", sans-serif;
+    }
+
+    .footer-logo img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .footer-social{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-social img{
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
 @keyframes img-appear{
     from{
         opacity: 0;

@@ -28,6 +28,16 @@
         animation: bg-gradient 20s ease infinite;
     }
 }
+
+@media (max-width: 767px){
+    .banner{
+        padding-block: 1.5rem;
+    }
+
+    .banner .scroller{
+        padding-block: 1rem;
+    }
+}
 @keyframes bg-gradient{
     50%{
         background-position: 100% 50%;
